@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>JYJ's Portfolio</title>
+    <meta name="description" content="Studying web developer to change the world">
+    <meta name="author" content="Jeong Yujae">
+    <script src="https://kit.fontawesome.com/eb5b4a0db9.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="png" href="/images/img/Main logo.png">
+    <link rel="stylesheet" href="style.css">
+    <style src="main.js" defer></style> <!-- html 로딩 하는 동안 js 파일도 같이 다운 받지만, 순서는 html -> js 순으로 하게 하는 코드 defer -->
+    
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navbar_logo">
+            <i class="image">
+                <img src="/images/img/Main logo.png" alt="main logo"></i>
+            <a href="#">Yujae</a>
+        </div>
+    </nav>
+        <ul class="navbar_menu">
+            <li class="navbar_menu_item">Home</li>
+            <li class="navbar_menu_item">About</li>
+            <li class="navbar_menu_item">Skills</li>
+            <li class="navbar_menu_item">My work</li>
+            <li class="navbar_menu_item">Testimonials</li>
+            <li class="navbar_menu_item">Contact</li>
+        </ul>
+
+    <section id="home"></section>
+        <img src="/images/img/profile.jpg" alt="JYJ'S profile" class="home__avatar">
+        <h1>Hello, I'm YUJAE JEONG</h1>
+        <h2>Student studying web, 아직 지정 안됨</h2>
+        <button class="home__contact"></button>
+
+    <section id="about"></section>
+        <h1>About me</h1>
+        <p>아직 지정되지 않음 한 2~3 문장 정도로 표현 할 것 같은데 어떻게 쓰면 될까요?!?!/</p>
+        <div class="about__majors">
+            <div class="major"></div>
+                    <div class="major_icon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>S
+                    <div class="major_title">
+                        <i>HTML/CSS</i>
+                    </div>
+                    <div class="major_description">
+                        <i>Basic Front-end skills </i>
+
+                    </div>
+            </div>
+
+            <div class="about__majors">
+                <div class="major">
+
+                    </div>
+                    <div class="major_icon">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <div class="major_title">
+                        JavaScript and React.js 
+                    </div>
+                    <div class="major_description">
+                        Front end framework and server
+                    </div>
+            </div>
+
+            <div class="about__majors">
+                <div class="major">
+
+                    </div>
+                    <div class="major_icon">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <div class="major_title">
+                        Python algorithm, data analysis, and finace coding
+                    </div>
+                    <div class="major_description">
+
+                    </div>
+            </div>
+        </div>
+
+        <div class="about_history">
+            <div class="history">
+                <img src="/images/khu.jpg" alt="khu">
+                <p class="job__name">Khunghee University Business Mangement</p>
+                <p class="job__period">2020~</p>
+            </div>
+            <!-- <div class="history">
+                <img src="" alt="">
+                <p class="job__name"></p>
+                <p class="job__period"></p>
+            </div> -->
+        </div>
+
+    <section id="skills"></section>
+        <h1>Skills</h1>
+        <h2>Skills & Interest</h2>
+        <p>Working various parts, but heading to a front-end web developer</p>
+
+        <div class="skillset">
+            <div class="skillset__left"></div>
+                <h3 class="skillset__title">Skills</h3>
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>HTML</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>CSS</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>JavaScript</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>REACT</span>
+                        <span>30%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill__description">
+                        <span>PYTHON</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+
+
+            <div class="skillset__right"></div>
+                <div class="tools">
+                    <h3 class="skillset__title">Tools</h3>
+                    <ul class="tools_list">
+                        <li><span>Visual Studio Code</span></li>
+                        <li><span>Atom</span></li>
+                        <li><span>Pandas Data</span></li>
+                        <li><span>미정</span></li>
+                        <li><span>미정</span></li>
+                    </ul>
+                </div>
+                <div class="etc">
+                    <h3 class="skillset__title">Etc</h3>
+                        <li><span>Algorithm study blog</span></li>
+                        <li><span>English</span></li>
+                        <li><span>Japanese N3</span></li>
+
+                </div>
+
+        </div>
+
+        
+    <section id="work">
+        <h1>My work</h1>
+        <h3>Projects</h3>
+        <div class="work_categories">
+            <button class="category__btn">All<span class="category__count">3</span</button>
+            <button class="catrgoty__btn">Front-End <span class="category__count">1</span></button>
+            <button class="catrgoty__btn">Finance Coding<span class="category__count">2</span></button> 
+        </div>
+
+        <div class="work__projects">
+            <a href="https://github.com/JeongYujae/Codebase_for_web" class="project">
+                <img src="/images/projects/Main page design.PNG" alt="Main page design Front end" class="project__img">
+                <div class="project__description">
+                    <h3>Basic web layout process</h3>
+                    <span>Using Flex / Grid tec to design sthe main page of web</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/JeongYujae/Pytrader" class="project">
+                <img src="/images/projects/Pyqt.png" alt="Main page design Front end" class="project__img">
+                <div class="project__description">
+                    <h3>Auto stock trading based on algorithm using Python backtesting/h3>
+                    <span>Based on Algorithm, this program would automatically buy and sell your stock!</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/JeongYujae/Pandas_10Y-RATE_ETF_DATA" class="project">
+                <img src="/images/projects/Finance data analysis.png" alt="Main page design Front end" class="project__img">
+                <div class="project__description">
+                    <h3>Finance Analysis</h3>
+                    <span>Using Python to analyize the correlationship between 10Y Rate data and Stock</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+
+    <section id="testimonials">
+        <h1>Testimonials</h1>
+        <h3>Word from coworkers</h3>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="" alt="" class="testinomial__avator">
+                <div class="testimonial__speech-bubble">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, error?</p>
+                    <p class="name"><a href="그 사람 깃허브 주소">이름/소속</a></p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="" alt="" class="testinomial__avator">
+                <div class="testimonial__speech-bubble">
+                    <p>Tres bien!</p>
+                    <p class="name"><a href="https://github.com/goragoraki">GO sung hoon/ KHU</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="contact__title">Let's talk</h1>
+        <h2 class="contact__email"></h2>
+        <div class="contact__links">
+            <a href="https://github.com/JeongYujae" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://blue-coding-story.tistory.com/" target="_blank">
+                <i class="fa-brands fa-blogger-b"></i>
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
