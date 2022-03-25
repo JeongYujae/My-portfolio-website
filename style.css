@@ -64,6 +64,14 @@ ul{
     list-style: none;
 }
 
+button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
 /* Navbar */
 
 #navbar{
@@ -94,4 +102,89 @@ ul{
 .navbar_menu_item:hover{
     background-color: #263859;
     border-radius: var(--size-border-radius);
+}
+
+#home{
+    background-color: #17223b;
+    height: 60vh;
+    width: 100vw;
+    text-align: center;
+    
+}
+
+.home__avatar{
+    height: 30vh;
+    width: 22vh;
+    border-radius: 50%;
+    border: 2px solid whitesmoke;
+    margin-top: 10px;
+}
+
+.home__title, .home__description{
+    color: whitesmoke;
+}
+
+.home__contact{
+    color: whitesmoke;
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid  white;
+    border-radius: var(--size-border-radius);
+    
+}
+
+section{
+    text-align: center;
+    padding: 50px;
+    max-width: 100%;
+    margin:auto;
+}
+
+.about__majors{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.major_icon{
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    font-size: 70px;
+    border: 1px solid black;
+    border-radius: var(--size-border-radius);
+    margin-bottom: 16px;
+    margin: auto;
+
+}
+.major_icon i{
+    transition: 300ms;
+}
+/* hover 되었을 떄 image만 변화를 주겠다는 코드 */
+.major_icon:hover i{
+    color: rgba(255,103,104,1);
+    transform: rotate(-30deg) scale(1.1);
+
+}
+.major{
+    width: 380px;
+    height: 224px;
+}
+
+.history{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.history__description{
+    margin: 0 16px;
+    /* text-align: left; */
+}
+.history__name{
+    font-size: var(--font-small);
+}
+.history__period{
+    font-size: var(--font-micro);
 }
