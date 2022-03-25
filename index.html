@@ -9,6 +9,10 @@
     <meta name="author" content="Jeong Yujae">
     <script src="https://kit.fontawesome.com/eb5b4a0db9.js" crossorigin="anonymous"></script>
     <link rel="icon" type="png" href="/images/img/Main logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style src="main.js" defer></style> <!-- html 로딩 하는 동안 js 파일도 같이 다운 받지만, 순서는 html -> js 순으로 하게 하는 코드 defer -->
     
@@ -16,20 +20,19 @@
 <body>
     <nav id="navbar">
         <div class="navbar_logo">
-            <i class="image">
-                <img src="/images/img/Main logo.png" alt="main logo"></i>
+            <i class="fab fa-diaspora"></i>
             <a href="#">Yujae</a>
         </div>
-    </nav>
+   
         <ul class="navbar_menu">
-            <li class="navbar_menu_item">Home</li>
+            <li class="navbar_menu_item active" >Home</li>
             <li class="navbar_menu_item">About</li>
             <li class="navbar_menu_item">Skills</li>
             <li class="navbar_menu_item">My work</li>
             <li class="navbar_menu_item">Testimonials</li>
             <li class="navbar_menu_item">Contact</li>
         </ul>
-
+    </nav>
     <section id="home"></section>
         <img src="/images/img/profile.jpg" alt="JYJ'S profile" class="home__avatar">
         <h1>Hello, I'm YUJAE JEONG</h1>
@@ -86,7 +89,7 @@
 
         <div class="about_history">
             <div class="history">
-                <img src="/images/khu.jpg" alt="khu">
+                <img src="/images/img/khu.jpg" alt="khu">
                 <p class="job__name">Khunghee University Business Mangement</p>
                 <p class="job__period">2020~</p>
             </div>
@@ -182,13 +185,13 @@
         <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work_categories">
-            <button class="category__btn">All<span class="category__count">3</span</button>
+            <button class="category__btn">All<span class="category__count">3</span></button>
             <button class="catrgoty__btn">Front-End <span class="category__count">1</span></button>
             <button class="catrgoty__btn">Finance Coding<span class="category__count">2</span></button> 
         </div>
 
         <div class="work__projects">
-            <a href="https://github.com/JeongYujae/Codebase_for_web" class="project">
+            <a href="https://github.com/JeongYujae/Codebase_for_web" class="project" target="_blank">
                 <img src="/images/projects/Main page design.PNG" alt="Main page design Front end" class="project__img">
                 <div class="project__description">
                     <h3>Basic web layout process</h3>
@@ -196,7 +199,7 @@
                 </div>
             </a>
 
-            <a href="https://github.com/JeongYujae/Pytrader" class="project">
+            <a href="https://github.com/JeongYujae/Pytrader" class="project" target="_blank">
                 <img src="/images/projects/Pyqt.png" alt="Main page design Front end" class="project__img">
                 <div class="project__description">
                     <h3>Auto stock trading based on algorithm using Python backtesting/h3>
@@ -204,7 +207,7 @@
                 </div>
             </a>
 
-            <a href="https://github.com/JeongYujae/Pandas_10Y-RATE_ETF_DATA" class="project">
+            <a href="https://github.com/JeongYujae/Pandas_10Y-RATE_ETF_DATA" class="project" target="_blank">
                 <img src="/images/projects/Finance data analysis.png" alt="Main page design Front end" class="project__img">
                 <div class="project__description">
                     <h3>Finance Analysis</h3>

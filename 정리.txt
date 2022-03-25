@@ -1,0 +1,97 @@
+1. box-sizing
+
+box-sizing: content- box 가 기본
+
+마진이나 보더를 줘도 주어진 사이즈를 유지
+
+box-sizing:border-box
+
+만약 보더나 패딩이 우어진 사이즈에 포함되게
+하고 싶을 때(사이즈에서 패딩과 보더만큼
+사이즈가 줄어드는 것)
+
+-------------------------
+
+2.position
+
+-static
+디폴트, 주어진 값을 듣지 않음
+
+-absolute
+초기의 자리에서 나와서 다른 요소들도 재배치
+직속 부모(static)기준이 아닌, 위치요소가 지정된 부모를
+기준으로, 주어진 값만큼 이동 
+
+-relative
+초기의 자리를 기준으로, 주어진 값을 준 만큼
+이동
+
+-sticky
+position:sticky
+하고 값을 지정해야함 -> 박스 기준으로
+
+-fixed
+
+viewport(즉 화면 제일 끝 기준으로)
+
+-----------
+
+3.정렬
+
+- margin: auto
+div와 같은 블록 레벨 요소들은 한 줄에 한개의 요소밖에 못 들어가서
+html에서 margin을 자동적으로 주게 되는데,(오른쪽에)
+이를 가로축 가운데로 정렬 하고 싶을 때
+
+- text-align
+
+블록 레벨: 적용 안됨 -> margin: auto 사용해야함
+
+else(인라인 블럭): text-align: center 로 해도 적용 가능
+
+- translate(50%, 50%)
+
+transform: translate(50%, 50%) ->요소 자체의 50%를 의미
+
+하면 컨테이너 정중앙으로 이동
+
+-> 정확하게 자식 요소가 부모의 50%가 아닐 때는
+position: abosolute, relative 로 지정하고
+값을 준 후에 translate로 조정
+
+- text-align + line-height
+
+text-align:center + line-height: 컨테이너 크기와 동일하게
+
+-> 한 줄 텍스트를 정렬할때 사용
+
+
+-------------
+
+4.background
+
+background-repeat/ background-postion/ 
+
+background-size: cover -> 반응형같이 늘어남
+
+---------------
+
+5.transform
+
+translate x,y,z 값 모두 가능 -> 위치를 이동
+
+scale -> 크기 키우기
+
+rotate -> deg로 돌리기
+
+------------------
+
+6.transition
+
+property:
+timing-function: 
+google 찾아서 다양한 옵션 활용해보기
+
+
+
+
