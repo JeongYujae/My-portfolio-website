@@ -383,6 +383,9 @@ project를 기준으로 위치를 지정함 */
 .testimonial .testimonial__speech-bubble{
     background-color: #A2D5AB;
     border-radius: var(--size-border-radius);
+    padding: 15px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .testimonial__speech-bubble p{
