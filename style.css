@@ -13,6 +13,8 @@
     --weight-regular: 400;
 
     --size-border-radius:4px;
+
+    --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -62,6 +64,11 @@ a{
 
 ul{
     list-style: none;
+}
+
+li{
+    list-style: none;
+
 }
 
 button{
@@ -138,10 +145,12 @@ button{
 section{
     text-align: center;
     padding: 50px;
-    max-width: 100%;
     margin:auto;
 }
 
+#about{
+    max-width: 1200px;
+}
 .about__majors{
     display: flex;
     justify-content: space-between;
@@ -188,3 +197,162 @@ section{
 .history__period{
     font-size: var(--font-micro);
 }
+
+.skill{
+    margin-bottom: 8px;
+}
+#skills{
+    background-color: #39AEA9;
+}
+
+#section__container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.skillset{
+    display: flex;
+    background-color: lightgrey;
+    margin: 20px 0;
+
+}
+
+.skillset__left{
+    flex-basis: 60%;
+    background-color: darkgray;
+    padding: 20px 40px;
+}
+
+.skillset__right{
+    flex-basis: 40%;
+    justify-content: center ;
+}
+
+.tools{
+    background-color: gray;
+    justify-content: center;
+}
+
+.skill__description{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill__bar{
+    width: 100%;
+    height: 3px;
+    background-color:#E5EFC1;
+}
+
+.skill__value{
+    height: 3px;
+    /* 여기서 지정하면 각각의 퍼센트를 반영할 수 없기 때문에 html 코드에서 직접 작성해줄 것 */
+    background-color:#557B83;
+}
+
+.tools, .etc{
+    padding: 20px;
+}
+
+.skillset__title{
+    margin-bottom: 8px;
+}
+
+.category__btn{
+    border: 1px solid black;
+    border-radius: var(--size-border-radius);
+    padding: 8px 48px;
+}
+
+.work_categories{
+    margin: 40px;
+}
+
+.catrogry__btn.active,
+.category__btn:hover{
+    background-color: #557B83;
+    color: white;
+}
+.catrogry__btn.active .category__count,
+.category__btn:hover .category__count{
+    opacity: 1;
+    top:0
+}
+/* display: inline-block 이유
+  -> span은 컨텐츠를 꽉 채우는 속성
+  동그라미 중앙으로 숫자 이동 시키려면
+  -> line-height를 높이와 맞춰주면 됨
+  */
+.category__count{
+    border-radius: 50%;
+    background-color:darkorange;
+    width:24px;
+    height: 24px;
+    display: inline-block;
+    line-height: 24px;
+    position: relative;
+    top: -20px;
+    left: 4px;
+    opacity: 0;
+    transition: all;
+    transition: all var(--animation-duration) ease-in;
+}
+
+.work__projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 250px;
+    margin: 2px;
+    background-color: lightgray
+}
+
+.project__img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.project__description{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    background-color: black;
+    transform: translateY(10px);
+    transition: all var(--animation-duration) ease-in;
+}
+
+.project:hover .project__description{
+    opacity: 0.8;
+    transform: translateY(0px)
+}
+
+.project__description h3:after{
+    content: '';
+    width: 25px;
+    height: 2px;
+    display: block;
+    position: relative;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: 8px;
+    background-color: black ;
+}
+
+/* project를 relative으로 지정해야
+.project__description이 aboluste로 지정했을 떄
+project를 기준으로 위치를 지정함 */
+
