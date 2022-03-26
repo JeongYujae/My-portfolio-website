@@ -31,7 +31,7 @@ h1{
 }
 
 h2{
-    font-size: var(--font-regular);
+    font-size: var(--font-midium);
     font-weight: var(--weight-semi-bold);
     color: black;
     margin: 8px 0px 0 0 ;
@@ -356,3 +356,65 @@ section{
 .project__description이 aboluste로 지정했을 떄
 project를 기준으로 위치를 지정함 */
 
+
+#testimonials{
+    background-color: #557B83;
+}
+
+.testimonials{
+    margin: 40px;
+}
+
+.testimonial{
+    display: flex;
+}
+
+.testimonial__avator{
+    width: 150px;
+    height: 150px;
+}
+
+.testimonial__avator:nth-child(odd){
+    margin-right: 40px;
+}
+.testimonial__avator:nth-child(even){
+    margin-left: 40px;
+}
+.testimonial .testimonial__speech-bubble{
+    background-color: #A2D5AB;
+    border-radius: var(--size-border-radius);
+}
+
+.testimonial__speech-bubble p{
+    color: black
+
+}
+.testimonial__speech-bubble a{
+    color: white
+
+}
+
+#contact{
+    background-color: #E5EFC1;  
+}
+
+.contact__title,
+.contact__email{
+    color: white;
+}
+
+.contact__title{
+    margin:  24px;
+}
+
+.contact__links{
+    font-size: var(--font-large);
+    margin: 24px;
+}
+
+
+.contact__links i:hover{
+    transform: scale(1.2);
+    color: black;
+    transition: var(--animation-duration) ease-in;
+}
