@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JYJ's Portfolio</title>
     <meta name="description" content="Studying web developer to change the world">
     <meta name="author" content="Jeong Yujae">
     <script src="https://kit.fontawesome.com/eb5b4a0db9.js" crossorigin="anonymous"></script>
     <link rel="icon" type="png" href="/images/img/Main logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style src="main.js" defer></style> <!-- html 로딩 하는 동안 js 파일도 같이 다운 받지만, 순서는 html -> js 순으로 하게 하는 코드 defer -->
+    <script src="main.js" defer></script> <!-- html 로딩 하는 동안 js 파일도 같이 다운 받지만, 순서는 html -> js 순으로 하게 하는 코드 defer -->
     
 </head>
 <body>
@@ -25,19 +25,28 @@
         </div>
    
         <ul class="navbar_menu">
-            <li class="navbar_menu_item active" >Home</li>
-            <li class="navbar_menu_item">About</li>
-            <li class="navbar_menu_item">Skills</li>
-            <li class="navbar_menu_item">My work</li>
-            <li class="navbar_menu_item">Testimonials</li>
-            <li class="navbar_menu_item">Contact</li>
+            <!-- data-link를 js에서 event.target 이나 target.dataset.link로 호출 가능 -->
+            <li class="navbar_menu_item active" data-link="#home">Home</li>
+            <li class="navbar_menu_item" data-link="#about">About</li>
+            <li class="navbar_menu_item" data-link="#skills">Skills</li>
+            <li class="navbar_menu_item" data-link="#work">My work</li>
+            <li class="navbar_menu_item" data-link="#testimonials">Testimonials</li>
+            <li class="navbar_menu_item" data-link="#contact">Contact</li>
         </ul>
+        <button class="navbar__toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
     </nav>
+
+    
     <section id="home">
-        <img src="/images/img/profile.jpg" alt="JYJ'S profile" class="home__avatar">
-        <h1 class="home__title">Hello, I'm YUJAE JEONG</h1>
-        <h2 class="home__description">Studying programming for web development</h2>
-        <button class="home__contact">Contact Me!</button>
+        <div class="home__container">
+            <img src="/images/img/profile.jpg" alt="JYJ'S profile" class="home__avatar">
+            <h1 class="home__title">Hello, I'm YUJAE JEONG</h1>
+            <h2 class="home__description">Studying programming for web development</h2>
+            <button class="home__contact" data-link="contact">Contact Me!</button>
+        </div>
+        
     </section>
 
     <section id="about">
@@ -197,63 +206,69 @@
     </section>    
 
     <section id="work">
-        <h1>My work</h1>
-        <h3>Projects</h3>
-        <div class="work_categories">
-            <button class="category__btn">All<span class="category__count">3</span></button>
-            <button class="category__btn">Front-End <span class="category__count">1</span></button>
-            <button class="category__btn">Finance Coding<span class="category__count">2</span></button> 
+        <div class="section__container">
+            <h1>My work</h1>
+            <h3>Projects</h3>
+            <div class="work_categories">
+                <button class="category__btn" data-filter="*">All<span class="category__count">3</span></button>
+                <button class="category__btn" data-filter="front-end">Front-End <span class="category__count">1</span></button>
+                <button class="category__btn" data-filter="finance coding">Finance Coding<span class="category__count">2</span></button> 
+            </div>
+    
+            <div class="work__projects">
+                <a href="https://github.com/JeongYujae/Codebase_for_web" class="project" target="_blank" data-type="front-end">
+                    <img src="/images/projects/Main page design.PNG" alt="Main page design Front end" class="project__img">
+                    <div class="project__description">
+                        <h3>Basic web layout process</h3>
+                        <span>Using Flex / Grid tec to design sthe main page of web</span>
+                    </div>
+                </a>
+    
+                <a href="https://github.com/JeongYujae/Pytrader" class="project" target="_blank" data-type="finance coding">
+                    <img src="/images/projects/Pyqt.png" alt="Main page design Front end" class="project__img">
+                    <div class="project__description">
+                        <h3>Algorithm based Auto stock trading</h3>
+                        <span>Based on Algorithm, this program would automatically buy and sell your stock!</span>
+                    </div>
+                </a>
+    
+                <a href="https://github.com/JeongYujae/Pandas_10Y-RATE_ETF_DATA" class="project" target="_blank" data-type="finance coding">
+                    <img src="/images/projects/Finance data analysis.png" alt="Main page design Front end" class="project__img">
+                    <div class="project__description">
+                        <h3>Finance Analysis</h3>
+                        <span>Using Python to analyize the correlationship between 10Y Rate data and Stock</span>
+                    </div>
+                </a>
+            </div>
         </div>
-
-        <div class="work__projects">
-            <a href="https://github.com/JeongYujae/Codebase_for_web" class="project" target="_blank">
-                <img src="/images/projects/Main page design.PNG" alt="Main page design Front end" class="project__img">
-                <div class="project__description">
-                    <h3>Basic web layout process</h3>
-                    <span>Using Flex / Grid tec to design sthe main page of web</span>
-                </div>
-            </a>
-
-            <a href="https://github.com/JeongYujae/Pytrader" class="project" target="_blank">
-                <img src="/images/projects/Pyqt.png" alt="Main page design Front end" class="project__img">
-                <div class="project__description">
-                    <h3>Algorithm based Auto stock trading</h3>
-                    <span>Based on Algorithm, this program would automatically buy and sell your stock!</span>
-                </div>
-            </a>
-
-            <a href="https://github.com/JeongYujae/Pandas_10Y-RATE_ETF_DATA" class="project" target="_blank">
-                <img src="/images/projects/Finance data analysis.png" alt="Main page design Front end" class="project__img">
-                <div class="project__description">
-                    <h3>Finance Analysis</h3>
-                    <span>Using Python to analyize the correlationship between 10Y Rate data and Stock</span>
-                </div>
-            </a>
-        </div>
+      
     </section>
 
 
 
     <section id="testimonials">
-        <h1>Testimonials</h1>
-        <h3>Word from coworkers</h3>
-        <div class="testimonials">
-            <div class="testimonial">
-                <img src="/images/img/곰돌이.png" alt="곰돌이 사진" class="testimonial__avator">
-                <div class="testimonial__speech-bubble">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam illum non culpa velit assumenda deleniti voluptatem minus eos adipisci vero.</p>
-                    <p class="name"><a href="#">곰돌이/카카오</a></p>
+        <div class="section__container">
+            <h1>Testimonials</h1>
+            <h3>Word from coworkers</h3>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="/images/img/곰돌이.png" alt="곰돌이 사진" class="testimonial__avator">
+                    <div class="testimonial__speech-bubble">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam illum non culpa velit assumenda deleniti voluptatem minus eos adipisci vero.</p>
+                        <p class="name"><a href="#">곰돌이/카카오</a></p>
+                    </div>
                 </div>
-            </div>
-            <div class="testimonial">
-                <div class="testimonial__speech-bubble">
-                    <p>Tres bien!</p>
-                    <p class="name"><a href="https://github.com/goragoraki">KO sung hoon/ KHU</a></p>
+                <div class="testimonial">
+                    <div class="testimonial__speech-bubble">
+                        <p>Tres bien!</p>
+                        <p class="name"><a href="https://github.com/goragoraki" target="_blank">KO sung hoon/ KHU</a></p>
+                    </div>
+                    <img src="/images/img/곰돌이.png" alt="곰돌이 사진" class="testimonial__avator">
+                    
                 </div>
-                <img src="/images/img/곰돌이.png" alt="곰돌이 사진" class="testimonial__avator">
-                
             </div>
         </div>
+      
     </section>
 
     <section id="contact">
@@ -268,6 +283,10 @@
             </a>
         </div>
     </section>
+
+    <button class="arrow-up">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
 </body>
 </html>

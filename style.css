@@ -82,12 +82,23 @@ button{
 /* Navbar */
 
 #navbar{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color:#6b778d;
-    color: white;
+    /* background-color:#6b778d; */
+    background-color:transparent;
     align-items: center;
     padding: 16px;
+    color: white;
+    transition: all var(--animation-duration) ease-in-out;
+    z-index: 1;
+}
+
+#navbar.navbar--dark{
+    background-color:#1C0A00;
+    padding: 8px;
+    
 }
 .navbar_logo{
     font-size: var(--font-midium);
@@ -111,11 +122,22 @@ button{
     border-radius: var(--size-border-radius);
 }
 
+.navbar__toggle-btn{
+    position: absolute;
+    right: 38px;
+    top: 24px;
+    font-size: 24px;
+    color: white;
+    display: none;
+}
 #home{
     background-color: #17223b;
-    height: 60vh;
-    width: 100vw;
+    padding: 40px; 
+    padding-top: 40px;
+    /* height: 60vh;
+    width: 100vw; */
     text-align: center;
+    height: 600px;
     
 }
 
@@ -357,6 +379,9 @@ section{
 project를 기준으로 위치를 지정함 */
 
 
+.project.invisible{
+    display: none;
+}
 #testimonials{
     background-color: #557B83;
 }
@@ -420,4 +445,64 @@ project를 기준으로 위치를 지정함 */
     transform: scale(1.2);
     color: black;
     transition: var(--animation-duration) ease-in;
+}
+
+
+.arrow-up{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    background-color: #17223b;
+    color: white;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
+}
+/* display는 생겼다가 사라지는거라 animation을 줄 수 없음
+그래서 opacity로 설정했고,
+opacity에 포인터를 없애주는 과정까지 */
+.arrow-up.visible{
+    opacity: 1;
+   pointer-events: auto;
+}
+
+@media screen and (max-width: 768px){
+    .navbar__toggle-btn{
+        display: block;
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar_menu{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .about__majors{
+        flex-direction: column;
+    }
+    .major{
+        margin-bottom: 38px;
+    }
+
+    .skillset{
+        flex-direction: column;
+    }
+
+    .project {
+        flex-grow: 1;
+    }
+
+    .testimonial__avator{
+        width: 80px;
+        height: 80px;
+    }
 }
