@@ -109,15 +109,16 @@ button{
 }
 .navbar_menu_item{
     padding: 8px 12px;
-    margin-right: 0 4px
-}
-
-.navbar_menu_item.active{
-    border: 1px solid white;
+    margin: 0 4px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid transparent;
     border-radius: var(--size-border-radius);
 }
 
+
 .navbar_menu_item:hover{
+    border-color: white;
     background-color: #263859;
     border-radius: var(--size-border-radius);
 }
@@ -290,12 +291,12 @@ section{
     margin: 40px;
 }
 
-.catrogry__btn.active,
+.category__btn.selected,
 .category__btn:hover{
     background-color: #557B83;
     color: white;
 }
-.catrogry__btn.active .category__count,
+.catrogry__btn.selected .category__count,
 .category__btn:hover .category__count{
     opacity: 1;
     top:0
@@ -317,15 +318,22 @@ section{
     left: 4px;
     opacity: 0;
     transition: all;
-    transition: all var(--animation-duration) ease-in;
+    transition: all var(--animation-duration) ease-out;
 }
 
 .work__projects{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    transition: all var(--animation-duration) ease-in;
 }
 
+.work__projects.anim-out{
+    opacity: 0.6;
+    transform: scale(0.96) translateY(40px);
+
+}
 .project{
     position: relative;
     display: flex;
@@ -362,6 +370,10 @@ section{
     transform: translateY(0px)
 }
 
+.project__description h3{
+    color: orange;
+}
+
 .project__description h3:after{
     content: '';
     width: 25px;
@@ -372,8 +384,8 @@ section{
     margin-left: -12px;
     margin-top: 8px;
     background-color: black ;
+    transform: translateX(-50%);
 }
-
 /* project를 relative으로 지정해야
 .project__description이 aboluste로 지정했을 떄
 project를 기준으로 위치를 지정함 */
@@ -484,6 +496,10 @@ opacity에 포인터를 없애주는 과정까지 */
         text-align: center;
         width: 100%;
         display: none;
+    }
+
+    .navbar_menu.open{
+        display: block;
     }
 
     .about__majors{

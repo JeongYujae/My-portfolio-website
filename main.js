@@ -27,8 +27,8 @@ navbarMenu.addEventListener('click', (event) =>{
     if (link==null){
         return;
     }
-    const scrollTo=document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: "smooth"});
+    navbarMenu.classList.remove('open')
+    scrollIntoViews(link);
 })
 
 const contact=document.querySelector('.home__contact');
@@ -86,11 +86,42 @@ workBtnContainer.addEventListener('click', (e) =>{
         return;
     }
 
-    projects.forEach((project) => {
+    //Move selection to clicked button
+
+    const active= document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target=e.target.nodeName=='BUTTON' ? e.target : e.target.parentNode;
+    //BUTTON 조건에 맞으면(? 이하) 실행문 : 아니면 실행문;
+    //target에서 span이 클릭되어서 추가하는데 문제가 생겨 -> 이를 해결
+    target.classList.add('selected');
+
+    projectContainer.classList.add('anim-out');
+    setTimeout(() =>{
+        projects.forEach((project) => {
         if(filter ==='*' || filter===project.dataset.type) {
             project.classList.remove('invisible');
         } else{
             project.classList.add('invisible');
         }
     });
-});
+
+        projectContainer.classList.remove('anim-out')
+    }, 300);
+    
+});    
+
+//anim-out이 추가되고 없애주지 않으면 계속 css에서의 opacity가
+//지정된 값으로 남아있음
+
+//코드의 순서가 setTimeout이 먼저 온 이유
+//먼저 filter를 하고 3초를 주는 것이 3초를 먼저 주고 필터링을
+//하는 것보다 애니메이션이 자연스러움
+
+
+
+//navbar toggoel button for meadia query
+
+const navbarToggleBtn=document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () =>{
+    navbarMenu.classList.toggle('open');
+})
