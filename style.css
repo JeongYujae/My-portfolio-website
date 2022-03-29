@@ -98,6 +98,7 @@ button{
 #navbar.navbar--dark{
     background-color:#1C0A00;
     padding: 8px;
+
     
 }
 .navbar_logo{
@@ -285,6 +286,7 @@ section{
     border: 1px solid black;
     border-radius: var(--size-border-radius);
     padding: 8px 48px;
+    position: relative;
 }
 
 .work_categories{
@@ -313,9 +315,9 @@ section{
     height: 24px;
     display: inline-block;
     line-height: 24px;
-    position: relative;
+    position: absolute;
     top: -20px;
-    left: 4px;
+    right: 16px;
     opacity: 0;
     transition: all;
     transition: all var(--animation-duration) ease-out;
@@ -438,6 +440,9 @@ project를 기준으로 위치를 지정함 */
     background-color: #E5EFC1;  
 }
 
+.home__contact:hover{
+    background-color: #4FD3C4;
+}
 .contact__title,
 .contact__email{
     color: white;
@@ -483,8 +488,19 @@ opacity에 포인터를 없애주는 과정까지 */
 }
 
 @media screen and (max-width: 768px){
+
+    :root{
+        --font-large:30px;
+        --font-midium:18px;
+        --font-regular:16px;
+        --font-small: 14px;
+        --font-micro:12px;
+    }
     .navbar__toggle-btn{
         display: block;
+        top: 16px;
+        right: 16px;
+        font-size: var(--font-midium);
     }
     #navbar{
         flex-direction: column;
@@ -502,23 +518,53 @@ opacity에 포인터를 없애주는 과정까지 */
         display: block;
     }
 
+    .section{
+        padding: 16px;
+        padding-top: 40px;
+    }
     .about__majors{
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
     }
     .major{
-        margin-bottom: 38px;
+        margin-bottom: 30px;
     }
 
     .skillset{
         flex-direction: column;
     }
+    .category__btn{
+        margin: 4px 0;
+        width: 100%;
+    }
 
     .project {
         flex-grow: 1;
     }
-
+    .testimonial{
+        flex-direction: column;
+        align-items: center;
+    }
     .testimonial__avator{
         width: 80px;
         height: 80px;
+    }
+
+    .testimonial__speech-bubble{
+        order: 1;
+    }
+
+    .testimonial__avator:nth-child(even),    .testimonial__avator:nth-child(odd){
+        margin:0;
+        margin-bottom: 10px;
+    }
+
+    .arrow-up{
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        bottom: 16px;
+        right: 16px;
     }
 }
